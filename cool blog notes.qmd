@@ -9,16 +9,17 @@ editor: visual
 
 ## HW: for tuesday 1/30/24
 
-1.  Take notes in a quarto file about R codeing 
+1.  Take notes in a quarto file about R codeing
 2.  Use R graph gallery to find base r graph code
 3.  save code to quarto file not R document
 4.  Make a quarto document about the process you did to change the graph in the quarto document \## make histogram in R
 
 ## Notes from: R Blogger- The most common R error messages
-- error obscurity can be broken down by categorization
-- errors from package installation to eval can be solved through re presenting the data
 
-## Making a graph: 
+-   error obscurity can be broken down by categorization
+-   errors from package installation to eval can be solved through re presenting the data
+
+## Making a graph:
 
 ```{r}
 # Create data
@@ -32,5 +33,3 @@ plot(y~x , ylim = rev(range(y)) ,
 #Add the grey lines
 abline(v=seq(0,900,100) , col="grey" , lwd=0.6)
 ```
-
-
