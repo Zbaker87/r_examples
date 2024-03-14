@@ -1,0 +1,68 @@
+---
+title: "GGplot2 Tutorial"
+format: html
+editor: visual
+---
+
+## GGplot 2 tutorial
+
+```{r} 
+chic <- readr::read_csv("https://cedricscherer.com/data/chicago-nmmaps-custom.csv") 
+tibble::glimpse(chic)
+
+head(chic, 10)
+
+
+```
+## ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.##
+1. Data: The raw data that you want to plot.
+2. Geometries geom_: The geometric shapes that will represent the data.
+3. Aesthetics aes(): Aesthetics of the geometric and statistical objects, such as position, color, size, shape, and transparency
+Scales scale_: Maps between the data and the aesthetic dimensions, such as data range to plot width or factor values to colors.
+4. Statistical transformations stat_: Statistical summaries of the data, such as quantiles, fitted curves, and sums.
+5. Coordinate system coord_: The transformation used for mapping data coordinates into the plane of the data rectangle.
+6. Facets facet_: The arrangement of the data into a grid of plots.
+7. Visual themes theme(): The overall visual defaults of a plot, such as background, grids, axes, default typeface, sizes and colors.
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+
+(g <- ggplot(chic, aes(x = date, y = temp)))
+
+g + geom_point()
+g + geom_line()
+g + geom_point() + gemo_line()
+
+g + geom_point(color = "firebrick", shape = "diamond", size = 2) #changing variables
+g + geom_point(color = "firebrick", shape = "diamond", size = 2) +
+    geom_line(color = "firebrick", linetype = "dotted", lwd = .3)
+theme_set(theme_bw())
+
+g + geom_point(color = "firebrick")
+
+#Manipulating axes
+
+ggplot(chic, aes(x = date, y = temp)) +
+  geom_point(color = "firebrick") +
+  labs(x = "Year", y = "Temperature (°F)")
+
+ggplot(chic, aes(x = date, y = temp)) +
+  geom_point(color = "firebrick") +
+  labs(x = "Year", y = expression(paste("Temperature (", degree ~ F, ")"^"(Hey, why should we use metric units?!)")))
+
+#Increase spacing between axis titles, and increasing sizing of axis margins
+
+ggplot(chic, aes(x = date, y = temp)) +
+  geom_point(color = "firebrick") +
+  labs(x = "Year", y = "Temperature (°F)") +
+  theme(axis.title.x = element_text(vjust = 0, size = 15),
+        axis.title.y = element_text(vjust = 2, size = 15))
+ggplot(chic, aes(x = date, y = temp)) +
+  geom_point(color = "firebrick") +
+  labs(x = "Year", y = "Temperature (°F)") +
+  theme(axis.title.x = element_text(margin = margin(t = 10), size = 15),
+        axis.title.y = element_text(margin = margin(r = 10), size = 15))
+
+```
+

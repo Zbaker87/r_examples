@@ -1,0 +1,11 @@
+---
+title: "Reflection"
+format: html
+editor: visual
+---
+
+## Reflections so far
+
+I think so far in the class I have done decently well though I am not sure I would say I have worked hard enough for an A yet. I say that for two reasons, 1) I have not really had to try with the course material until starting the website project and 2) I think I could have spent more time making absolutely sure my foundations are solid instead of trying to push myself harder on the smaller assignments with self imposed handicaps. Going off of tha tthough I would like to point out that I think I will have put in enough work for an A by the end of the semester as I am really getting into this website design and I plan on pushing myself to do and understand more of the nitty gritty for it. I should also point out at this point that I tend to be fairly harsh towards myself with reflections and things of this nature so if you dont feel the same way about what I have said that may be affecting it. I would like to end with an A and I know I will reach the point where I also feel I have earned it but at this point I feel I have put in more of a B to B+ level of work (excluding the website).
+
+That being said I have actually completed most of what my objectives were for the first part of the class (the only objectives not complete at this stage is creating a website and becoming confident with gitkraken) but I have put in an adequate amount of work to the objectives for that to be graded as an A- (since the website was part of the latter half of the semesters objectives and gitkraken was a personal objective).
